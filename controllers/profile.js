@@ -5,12 +5,12 @@ const handleProfileGet = (req, res, db) => {
             if (user.length) {
                 res.json(user[0])
             } else {
-                res.status(400).json('Not Found');
+                res.status(400).json('Not Found')
             } 
         })
-        .catch(err => res.status(400).json('Error getting user'));
+        .catch(err => res.status(400).json('Error getting user'))
 }
 
 module.exports = {
-    handleProfileGet: handleProfileGet
+    handleProfileGet
 };
